@@ -1,2 +1,4 @@
-ipad-page/
-uploads/
+# Ignore all files inside uploads, but keep the folder
+/uploads/*
+!/uploads/.gitignore
+
