@@ -11,8 +11,8 @@
 <div class="w3-container">
 
 <?php
-$uploadDir = '/usr/local/var/www/uploads/';
-$processedFile = '/usr/local/var/www/resized_output.png';
+$uploadDir = '/usr/local/var/www/media-processr/uploads/';
+$processedFile = '/usr/local/var/www/media-processr/uploads/resized_output.png';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['media'])) {
     $uploadedPath = $uploadDir . basename($_FILES['media']['name']);
