@@ -1,3 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>media processr</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+</head>
+<body>
+
+<div class="w3-container">
+
 <?php
 $uploadDir = '/usr/local/var/www/uploads/';
 $processedFile = '/usr/local/var/www/resized_output.png';
@@ -18,9 +30,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['media'])) {
 }
 ?>
 
+<h2>Media procssr</h2>
+
 <form method="post" enctype="multipart/form-data">
-    <label>Select a video or image:</label><br>
+    <label>Select an image:</label><br>
     <input type="file" name="media" required><br><br>
-    <input type="submit" value="Upload & Process">
+    <input type="submit" value="Upload & Resize to 800x800">
 </form>
 
+</div>
+    
+</body>
+</html>
