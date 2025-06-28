@@ -31,31 +31,32 @@
 
 <?php
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['image']) && isset($_POST['text'])) {
-    $uploadDir = "uploads/";
+    $uploadDir = __DIR__ . "/uploads/";
+    $relativeUploadDir = "uploads/";
+    $scriptPath = __DIR__ . "/scripts/process_image.sh";
 
-    // Sanitize the uploaded filename to remove spaces, special characters, and periods
+    // Sanitize and prepare filenames
     $originalFileName = $_FILES['image']['name'];
     $sanitizedFileName = preg_replace("/[^a-zA-Z0-9_-]/", "_", pathinfo($originalFileName, PATHINFO_FILENAME));
     $sanitizedFileName .= "." . pathinfo($originalFileName, PATHINFO_EXTENSION);
 
     $uploadFile = $uploadDir . $sanitizedFileName;
     $outputFile = $uploadDir . "output_" . $sanitizedFileName;
-    $text = escapeshellarg($_POST['text']); // Escape text to prevent command injection
+    $relativeOutputFile = $relativeUploadDir . "output_" . $sanitizedFileName;
 
-    // Move the uploaded file to the sanitized filename
+    $text = escapeshellarg($_POST['text']); // Safe escaping
+
     if (move_uploaded_file($_FILES['image']['tmp_name'], $uploadFile)) {
-        // Construct and run the shell command
-        $command = "bash scripts/process_image.sh " . escapeshellarg($uploadFile) . " " . escapeshellarg($outputFile) . " " . $text;
-        $result = shell_exec($command);
+        // Build and run the command
+        $cmd = escapeshellcmd("bash $scriptPath " . escapeshellarg($uploadFile) . " " . escapeshellarg($outputFile) . " $text");
+        $result = shell_exec($cmd);
 
-        // Debugging: display shell output (optional)
         echo "<pre>$result</pre>";
 
-        // Display the generated image
         if (file_exists($outputFile)) {
             echo '<h3 class="w3-text-green">Thumbnail Preview:</h3>';
             echo '<div class="w3-center">';
-            echo '<img src="' . $outputFile . '" alt="Generated Thumbnail" style="max-width:100%">';
+            echo '<img src="' . $relativeOutputFile . '" alt="Generated Thumbnail" style="max-width:100%">';
             echo '</div>';
         } else {
             echo '<p class="w3-text-red">Error: Thumbnail generation failed.</p>';
@@ -66,9 +67,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['image']) && isset($_
 }
 ?>
 
-
 </div>
 
 </body>
 </html>
-
