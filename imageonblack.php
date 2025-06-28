@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['media'])) {
         $output = shell_exec($cmd);
         echo "<p><strong>File uploaded and processed!</strong></p>";
         echo "<h3>Processed Image Preview:</h3>";
-        echo "<img src=$processedFile style='max-width:100%; height:auto; border:1px solid #ccc; margin-top:1em;'>";
+        echo "<img src='uploads/resized_output.png' style='max-width:100%; height:auto; border:1px solid #ccc; margin-top:1em;'>";
         echo "<pre>$output</pre>";
     } else {
         echo "<p><strong>Upload failed.</strong></p>";
