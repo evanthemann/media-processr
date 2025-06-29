@@ -1,41 +1,38 @@
 <?php
-// Make sure the filename is provided via URL
-if (!isset($_GET['filename'])) {
-    die("No filename provided.");
-}
-
-$filename = basename($_GET['filename']);
-$inputPath = __DIR__ . '/uploads/' . $filename;
-$outputPath = __DIR__ . '/uploads/converted_output.mp4';
-$logPath = __DIR__ . '/process.log';
-
-// If the form is submitted (button clicked), run ffmpeg
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Build the FFmpeg command
-    $cmd = "/usr/local/bin/ffmpeg -i " . escapeshellarg($inputPath) .
-           " -c:v libx264 -preset fast -crf 23 -vf scale=1920:1080 " .
-           escapeshellarg($outputPath) . " > " . escapeshellarg($logPath) . " 2>&1 &";
-
-    // Run the command in the background
-    shell_exec($cmd);
-
-    // Redirect to the progress page
-    header("Location: check.php");
+// Validate the POST request
+if (!isset($_POST['filename'])) {
+    echo "No filename received.";
     exit;
 }
+
+$filename = basename($_POST['filename']);
+$uploadDir = __DIR__ . '/uploads/';
+$scriptPath = __DIR__ . '/scripts/convert_to_h264.sh';
+$logPath = __DIR__ . '/log.txt';
+
+$inputFile = $uploadDir . $filename;
+$outputFile = $uploadDir . 'converted_' . $filename;
+
+// Build and run the shell command in the background, redirect output to log
+$cmd = escapeshellcmd("/bin/bash $scriptPath '$inputFile' '$outputFile' > '$logPath' 2>&1 &");
+shell_exec($cmd);
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Run FFmpeg</title>
+    <title>Conversion Started</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
-<body>
-    <h1>Convert Uploaded Video</h1>
-    <p>File to convert: <strong><?php echo htmlspecialchars($filename); ?></strong></p>
+<body class="w3-container w3-light-grey">
 
-    <form method="POST">
-        <input type="submit" value="Run FFmpeg Command">
-    </form>
+    <div class="w3-card w3-white w3-padding w3-margin-top">
+        <h2 class="w3-text-green">Conversion Started</h2>
+        <p>The file <strong><?php echo htmlspecialchars($filename); ?></strong> is being processed.</p>
+        <form action="check.php" method="get">
+            <button class="w3-button w3-blue w3-margin-top" type="submit">Check Progress</button>
+        </form>
+    </div>
+
 </body>
 </html>

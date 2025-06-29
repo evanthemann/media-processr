@@ -1,39 +1,44 @@
 <?php
-$logPath = __DIR__ . '/process.log';
-
-// Read the last 10 lines of the log file
-function tailLog($file, $lines = 10) {
-    if (!file_exists($file)) {
-        return "Log file not found.";
-    }
-
-    $output = [];
-    exec("tail -n $lines " . escapeshellarg($file), $output);
-    return implode("\n", $output);
-}
-
-// Check for success
-$logContent = file_exists($logPath) ? file_get_contents($logPath) : '';
-$conversionComplete = strpos($logContent, 'Conversion complete') !== false;
+$logFile = __DIR__ . '/convert.log';
+$convertedFile = __DIR__ . '/uploads/converted_output.mp4';
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
-    <title>FFmpeg Progress</title>
+    <title>FFmpeg Convert - Check Progress</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
-<body>
-    <h1>FFmpeg Conversion Progress</h1>
-    <p>Refresh the page to update.</p>
+<body class="w3-container w3-light-grey">
 
-    <?php if ($conversionComplete): ?>
-        <h2 style="color: green;">✅ Conversion complete!</h2>
-    <?php endif; ?>
+<div class="w3-card w3-white w3-padding w3-margin-top">
+    <h2>FFmpeg Conversion Progress</h2>
 
-    <pre style="background:#f0f0f0; padding:1em; border:1px solid #ccc;">
-<?php echo htmlspecialchars(tailLog($logPath)); ?>
+    <p>Last 10 lines of the log:</p>
+    <pre class="w3-small w3-light-grey w3-padding">
+<?php
+if (file_exists($logFile)) {
+    $lines = explode("\n", trim(shell_exec("tail -n 10 " . escapeshellarg($logFile))));
+    foreach ($lines as $line) {
+        echo htmlspecialchars($line) . "\n";
+    }
+
+    // Show message if conversion appears complete
+    if (file_exists($convertedFile)) {
+        echo "\n✅ Conversion appears to be complete.";
+    }
+} else {
+    echo "Log file not found.";
+}
+?>
     </pre>
 
-    <a href="index.php">← Back to Upload</a>
+    <form method="get">
+        <button class="w3-button w3-blue w3-margin-top">Refresh</button>
+    </form>
+
+    <a href="index.php" class="w3-button w3-grey w3-margin-top">Back to Upload Page</a>
+</div>
+
 </body>
 </html>
