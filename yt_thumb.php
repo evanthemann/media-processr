@@ -8,6 +8,7 @@
 <body class="w3-light-grey">
 
 <div class="w3-container w3-padding-16 w3-white w3-round w3-margin">
+    <a href="index.php">Home</a>
     <h1 class="w3-center">YouTube Thumbnail Generator</h1>
     <p class="w3-center">Upload an image and add text to generate a YouTube thumbnail.</p>
 </div>
