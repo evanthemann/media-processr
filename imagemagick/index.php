@@ -31,18 +31,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['media'])) {
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Upload Video</title>
+    <title>Upload Image</title>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
 <body class="w3-container w3-padding">
-    <h2 class="w3-text-blue">Upload a Video</h2>
+    <a href="index.php">Home</a>
+    <h2 class="w3-text-blue">Upload an Image</h2>
 
     <?php if ($message): ?>
         <div class="w3-panel w3-red w3-padding"> <?php echo htmlspecialchars($message); ?> </div>
     <?php endif; ?>
 
     <form method="post" enctype="multipart/form-data" class="w3-container w3-card w3-padding">
-        <label class="w3-text-grey">Select video file:</label>
+        <label class="w3-text-grey">Select image file:</label>
         <input class="w3-input w3-border w3-margin-bottom" type="file" name="media" required>
         <button class="w3-button w3-green" type="submit">Upload</button>
     </form>
