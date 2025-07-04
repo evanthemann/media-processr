@@ -15,9 +15,17 @@ echo ""                              >> "$log_file"
         -c:a aac -b:a 128k \
         "$output_file"                >> "$log_file" 2>&1
 
+# Check if output was created
 if [ -f "$output_file" ]; then
-    echo "✅ Conversion complete"    >> "$log_file"
+    echo "✅ Conversion complete" >> "$log_file"
+    
+    # Derive relative web path
+    base_url="http://192.168.0.53:8080/media-processr/ffmpeg-convert/uploads"
+    filename=$(basename "$output_file")
+    echo "➡️ View: $base_url/$filename" >> "$log_file"
+
+    # Optional: clean up input
     rm "$input_file"
 else
-    echo "❌ Conversion failed"      >> "$log_file"
+    echo "❌ Error: Conversion failed." >> "$log_file"
 fi
