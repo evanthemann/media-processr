@@ -35,7 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['media'])) {
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
 <body class="w3-container w3-padding">
-    <a href="index.php">Home</a>
+    <a href="../index.php">Home</a>
     <h2 class="w3-text-blue">Upload an Image</h2>
 
     <?php if ($message): ?>

@@ -36,7 +36,7 @@ if (!file_exists($filepath)) {
         <input type="hidden" name="filename" value="<?= htmlspecialchars($filename) ?>">
         <input type="hidden" name="preset"   value="resize">
         <button class="w3-button w3-blue w3-margin-top" type="submit">
-            Resize
+            Resize 800px jpg
         </button>
     </form>
 
@@ -45,7 +45,7 @@ if (!file_exists($filepath)) {
         <input type="hidden" name="filename" value="<?= htmlspecialchars($filename) ?>">
         <input type="hidden" name="preset"   value="blackbg">
         <button class="w3-button w3-teal w3-margin-top" type="submit">
-            Extract → MP3
+            Black background 16x9 jpg
         </button>
     </form>
 
