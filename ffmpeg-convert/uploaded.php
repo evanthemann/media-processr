@@ -30,10 +30,31 @@ if (!file_exists($filepath)) {
     <h2 class="w3-center">File Uploaded Successfully</h2>
     <p class="w3-center">File: <strong><?php echo htmlspecialchars($filename); ?></strong></p>
 
-    <!-- Form to trigger FFmpeg conversion -->
+    <!-- Convert to 1080p (current) -->
     <form action="run.php" method="post" class="w3-center">
-        <input type="hidden" name="filename" value="<?php echo htmlspecialchars($filename); ?>">
-        <button class="w3-button w3-blue w3-margin-top" type="submit">Run FFmpeg Command</button>
+        <input type="hidden" name="filename" value="<?= htmlspecialchars($filename) ?>">
+        <input type="hidden" name="preset"   value="1080p">
+        <button class="w3-button w3-blue w3-margin-top" type="submit">
+            Convert → 1080p MP4
+        </button>
+    </form>
+
+    <!-- Extract audio (example) -->
+    <form action="run.php" method="post" class="w3-center">
+        <input type="hidden" name="filename" value="<?= htmlspecialchars($filename) ?>">
+        <input type="hidden" name="preset"   value="mp3">
+        <button class="w3-button w3-teal w3-margin-top" type="submit">
+            Extract → MP3
+        </button>
+    </form>
+
+    <!-- Make GIF (example) -->
+    <form action="run.php" method="post" class="w3-center">
+        <input type="hidden" name="filename" value="<?= htmlspecialchars($filename) ?>">
+        <input type="hidden" name="preset"   value="gif">
+        <button class="w3-button w3-orange w3-margin-top" type="submit">
+            Make GIF
+        </button>
     </form>
 
     <div class="w3-center w3-margin-top">
