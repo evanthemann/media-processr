@@ -1,0 +1,18 @@
+========== Fri Jul  4 10:46:19 PDT 2025 ==========
+Starting conversion…
+Input:  /usr/local/var/www/media-processr/imagemagick/uploads/IMG_3984.HEIC
+Output: /usr/local/var/www/media-processr/imagemagick/uploads/converted_IMG_3984.HEIC
+
+WARNING: The convert command is deprecated in IMv7, use "magick" instead of "convert" or "magick convert"
+
+✅ Conversion complete
+➡️ View: http://192.168.0.53:8080/media-processr/imagemagick/uploads/converted_IMG_3984.HEIC
+========== Fri Jul  4 10:50:41 PDT 2025 ==========
+Starting conversion…
+Input:  /usr/local/var/www/media-processr/imagemagick/uploads/IMG_4306.jpg
+Output: /usr/local/var/www/media-processr/imagemagick/uploads/converted_IMG_4306.jpg
+
+WARNING: The convert command is deprecated in IMv7, use "magick" instead of "convert" or "magick convert"
+
+✅ Conversion complete
+➡️ View: http://192.168.0.53:8080/media-processr/imagemagick/uploads/converted_IMG_4306.jpg
