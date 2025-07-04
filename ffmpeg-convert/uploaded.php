@@ -1,17 +1,16 @@
 <?php
-// Location of uploaded files
 $uploadDir = __DIR__ . '/uploads/';
 
-// Check if filename is passed from index.php
-if (!isset($_POST['filename'])) {
+/* 1️⃣ Expect ?file=FILENAME from the URL */
+if (!isset($_GET['file']) || $_GET['file'] === '') {
     echo "No file specified.";
     exit;
 }
 
-$filename = basename($_POST['filename']);
-$filepath = $uploadDir . $filename;
+$filename  = basename($_GET['file']);
+$filepath  = $uploadDir . $filename;
 
-// Double-check that the file actually exists
+/* 2️⃣ Confirm the file really exists in uploads/ */
 if (!file_exists($filepath)) {
     echo "Uploaded file not found.";
     exit;
