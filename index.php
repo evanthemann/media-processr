@@ -12,11 +12,11 @@
     <a href="index.php">Home</a>
     <h2>Media procssr</h2>
         <div class="w3-grid" style="gap:8px;grid-template-columns:repeat(auto-fit,minmax(150px,1fr))">
-        <a href="imageonblack.php"><div class="w3-padding w3-green"><h3>Image on black 16x9</h3></div></a>
-        <a href="resize.php"><div class="w3-padding w3-green"><h3>Resize</h3></div></a>
-        <a href="yt_thumb.php"><div class="w3-padding w3-green"><h3>YT Thumbnail</h3></div></a>
+        <!-- <a href="imageonblack.php"><div class="w3-padding w3-green"><h3>Image on black 16x9</h3></div></a> -->
+        <!-- <a href="resize.php"><div class="w3-padding w3-green"><h3>Resize</h3></div></a> -->
+        <!-- <a href="yt_thumb.php"><div class="w3-padding w3-green"><h3>YT Thumbnail</h3></div></a> -->
         <a href="ffmpeg-convert"><div class="w3-padding w3-green"><h3>FFmpeg Convert</h3></div></a>
-
+        <a href="imagemagick"><div class="w3-padding w3-green"><h3>Imagemagick Convert</h3></div></a>
         </div>
 </div>
     

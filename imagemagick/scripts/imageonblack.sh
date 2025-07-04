@@ -9,8 +9,8 @@ echo "Input:  $input_file"           >> "$log_file"
 echo "Output: $output_file"          >> "$log_file"
 echo ""                              >> "$log_file"
 
-/usr/local/bin/ffmpeg -i "$input_file" \
-        -vf "fps=10,scale=480:-1:flags=lanczos" -loop 0 \
+/usr/local/bin/convert "$input_file" \
+        -auto-orient -resize 1920x1080 -size 1920x1080 xc:black +swap -gravity center -composite \
         "$output_file"                >> "$log_file" 2>&1
 
 # Check if output was created
@@ -18,7 +18,7 @@ if [ -f "$output_file" ]; then
     echo "✅ Conversion complete" >> "$log_file"
     
     # Derive relative web path
-    base_url="http://192.168.0.53:8080/media-processr/ffmpeg-convert/uploads"
+    base_url="http://192.168.0.53:8080/media-processr/imagemagick/uploads"
     filename=$(basename "$output_file")
     echo "➡️ View: $base_url/$filename" >> "$log_file"
 

@@ -27,6 +27,8 @@ if (!file_exists($filepath)) {
 <body class="w3-light-grey">
 
 <div class="w3-container w3-white w3-padding w3-margin w3-round-large">
+    <a href="index.php">Home</a>
+
     <h2 class="w3-center">File Uploaded Successfully</h2>
     <p class="w3-center">File: <strong><?php echo htmlspecialchars($filename); ?></strong></p>
 

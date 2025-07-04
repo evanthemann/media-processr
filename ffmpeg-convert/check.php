@@ -19,6 +19,8 @@ if (file_exists($logFile)) {
 </head>
 <body class="w3-container w3-light-grey">
 <div class="w3-card w3-white w3-padding w3-margin-top">
+    <a href="index.php">Home</a>
+
     <h2>FFmpeg Progress – last 10 lines</h2>
 
     <pre class="w3-small w3-light-grey w3-padding"><?php echo htmlspecialchars($tail); ?></pre>
