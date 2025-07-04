@@ -1,0 +1,251 @@
+========== Fri Jul  4 08:23:04 PDT 2025 ==========
+Starting conversion…
+Input:  /usr/local/var/www/media-processr/ffmpeg-convert/uploads/2024-05-29-21-27-26.mp4
+Output: /usr/local/var/www/media-processr/ffmpeg-convert/uploads/converted_2024-05-29-21-27-26.mp4
+
+ffmpeg version 7.1.1-tessus  https://evermeet.cx/ffmpeg/  Copyright (c) 2000-2025 the FFmpeg developers
+  built with Apple clang version 16.0.0 (clang-1600.0.26.6)
+  configuration: --cc=/usr/bin/clang --prefix=/opt/ffmpeg --extra-version=tessus --enable-avisynth --enable-fontconfig --enable-gpl --enable-libaom --enable-libass --enable-libbluray --enable-libdav1d --enable-libfreetype --enable-libgsm --enable-libharfbuzz --enable-libmodplug --enable-libmp3lame --enable-libmysofa --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopenh264 --enable-libopenjpeg --enable-libopus --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvmaf --enable-libvo-amrwbenc --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxavs --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-libzvbi --enable-version3 --pkg-config-flags=--static --disable-ffplay
+  libavutil      59. 39.100 / 59. 39.100
+  libavcodec     61. 19.101 / 61. 19.101
+  libavformat    61.  7.100 / 61.  7.100
+  libavdevice    61.  3.100 / 61.  3.100
+  libavfilter    10.  4.100 / 10.  4.100
+  libswscale      8.  3.100 /  8.  3.100
+  libswresample   5.  3.100 /  5.  3.100
+  libpostproc    58.  3.100 / 58.  3.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '/usr/local/var/www/media-processr/ffmpeg-convert/uploads/2024-05-29-21-27-26.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf60.16.100
+  Duration: 00:00:07.87, start: 0.000000, bitrate: 10264 kb/s
+  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 1920x1080 [SAR 1:1 DAR 16:9], 10095 kb/s, 30 fps, 30 tbr, 15360 tbn (default)
+      Metadata:
+        handler_name    : VideoHandler
+        vendor_id       : [0][0][0][0]
+  Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 159 kb/s (default)
+      Metadata:
+        handler_name    : SoundHandler
+        vendor_id       : [0][0][0][0]
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 (native) -> h264 (libx264))
+  Stream #0:1 -> #0:1 (aac (native) -> aac (native))
+Press [q] to stop, [?] for help
+[libx264 @ 0x7fe75e7153c0] using SAR=1/1
+[libx264 @ 0x7fe75e7153c0] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2
+[libx264 @ 0x7fe75e7153c0] profile High, level 4.0, 4:2:0, 8-bit
+[libx264 @ 0x7fe75e7153c0] 264 - core 164 r3204 373697b - H.264/MPEG-4 AVC codec - Copyleft 2003-2025 - http://www.videolan.org/x264.html - options: cabac=1 ref=2 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=6 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=6 lookahead_threads=1 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=1 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=30 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to '/usr/local/var/www/media-processr/ffmpeg-convert/uploads/converted_2024-05-29-21-27-26.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf61.7.100
+  Stream #0:0(und): Video: h264 (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 1920x1080 [SAR 1:1 DAR 16:9], q=2-31, 30 fps, 15360 tbn (default)
+      Metadata:
+        handler_name    : VideoHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.19.101 libx264
+      Side data:
+        cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+  Stream #0:1(und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 128 kb/s (default)
+      Metadata:
+        handler_name    : SoundHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.19.101 aac
+frame=    0 fps=0.0 q=0.0 size=       0KiB time=N/A bitrate=N/A speed=N/A    frame=   25 fps= 19 q=29.0 size=     256KiB time=00:00:00.76 bitrate=2735.9kbits/s speed=0.598x    frame=   49 fps= 27 q=29.0 size=     512KiB time=00:00:01.56 bitrate=2677.5kbits/s speed=0.851x    frame=   71 fps= 30 q=29.0 size=     512KiB time=00:00:02.30 bitrate=1823.8kbits/s speed=0.964x    frame=   97 fps= 32 q=29.0 size=     768KiB time=00:00:03.16 bitrate=1986.9kbits/s speed=1.05x    frame=  119 fps= 34 q=29.0 size=    1024KiB time=00:00:03.90 bitrate=2151.0kbits/s speed=1.11x    frame=  141 fps= 35 q=29.0 size=    1280KiB time=00:00:04.63 bitrate=2263.2kbits/s speed=1.15x    frame=  162 fps= 36 q=29.0 size=    1280KiB time=00:00:05.33 bitrate=1966.2kbits/s speed=1.18x    frame=  189 fps= 37 q=29.0 size=    1536KiB time=N/A bitrate=N/A speed=N/A    frame=  221 fps= 39 q=29.0 size=    1792KiB time=N/A bitrate=N/A speed=N/A    [out#0/mp4 @ 0x7fe75e706c80] video:1857KiB audio:121KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.497720%
+frame=  236 fps= 40 q=-1.0 Lsize=    1988KiB time=00:00:07.80 bitrate=2088.3kbits/s speed=1.34x    
+[libx264 @ 0x7fe75e7153c0] frame I:1     Avg QP:19.18  size:241088
+[libx264 @ 0x7fe75e7153c0] frame P:59    Avg QP:19.63  size: 16722
+[libx264 @ 0x7fe75e7153c0] frame B:176   Avg QP:23.20  size:  3827
+[libx264 @ 0x7fe75e7153c0] consecutive B-frames:  0.4%  0.0%  1.3% 98.3%
+[libx264 @ 0x7fe75e7153c0] mb I  I16..4: 17.0% 47.6% 35.5%
+[libx264 @ 0x7fe75e7153c0] mb P  I16..4:  0.2%  1.1%  0.3%  P16..4:  5.4%  2.3%  1.7%  0.0%  0.0%    skip:89.0%
+[libx264 @ 0x7fe75e7153c0] mb B  I16..4:  0.3%  0.5%  0.0%  B16..8:  1.8%  0.9%  0.1%  direct: 1.4%  skip:94.9%  L0:27.8% L1:20.8% BI:51.5%
+[libx264 @ 0x7fe75e7153c0] 8x8 transform intra:58.6% inter:34.9%
+[libx264 @ 0x7fe75e7153c0] coded y,uvDC,uvAC intra: 82.1% 50.7% 20.4% inter: 2.7% 1.1% 0.0%
+[libx264 @ 0x7fe75e7153c0] i16 v,h,dc,p: 16% 18% 38% 27%
+[libx264 @ 0x7fe75e7153c0] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 12%  7% 45%  6%  5%  6%  5%  7%  7%
+[libx264 @ 0x7fe75e7153c0] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 19% 17% 17%  8%  8%  7%  8%  8%  8%
+[libx264 @ 0x7fe75e7153c0] i8c dc,h,v,p: 63% 16% 16%  4%
+[libx264 @ 0x7fe75e7153c0] Weighted P-Frames: Y:0.0% UV:0.0%
+[libx264 @ 0x7fe75e7153c0] ref P L0: 50.7% 49.3%
+[libx264 @ 0x7fe75e7153c0] ref B L0: 73.4% 26.6%
+[libx264 @ 0x7fe75e7153c0] ref B L1: 98.4%  1.6%
+[libx264 @ 0x7fe75e7153c0] kb/s:1917.21
+[aac @ 0x7fe75e73c840] Qavg: 1963.650
+✅ Conversion complete
+========== Fri Jul  4 08:25:49 PDT 2025 ==========
+Starting conversion…
+Input:  /usr/local/var/www/media-processr/ffmpeg-convert/uploads/2024-05-26 18-03-39.mp4
+Output: /usr/local/var/www/media-processr/ffmpeg-convert/uploads/converted_2024-05-26 18-03-39.mp4
+
+ffmpeg version 7.1.1-tessus  https://evermeet.cx/ffmpeg/  Copyright (c) 2000-2025 the FFmpeg developers
+  built with Apple clang version 16.0.0 (clang-1600.0.26.6)
+  configuration: --cc=/usr/bin/clang --prefix=/opt/ffmpeg --extra-version=tessus --enable-avisynth --enable-fontconfig --enable-gpl --enable-libaom --enable-libass --enable-libbluray --enable-libdav1d --enable-libfreetype --enable-libgsm --enable-libharfbuzz --enable-libmodplug --enable-libmp3lame --enable-libmysofa --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopenh264 --enable-libopenjpeg --enable-libopus --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvmaf --enable-libvo-amrwbenc --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxavs --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-libzvbi --enable-version3 --pkg-config-flags=--static --disable-ffplay
+  libavutil      59. 39.100 / 59. 39.100
+  libavcodec     61. 19.101 / 61. 19.101
+  libavformat    61.  7.100 / 61.  7.100
+  libavdevice    61.  3.100 / 61.  3.100
+  libavfilter    10.  4.100 / 10.  4.100
+  libswscale      8.  3.100 /  8.  3.100
+  libswresample   5.  3.100 /  5.  3.100
+  libpostproc    58.  3.100 / 58.  3.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '/usr/local/var/www/media-processr/ffmpeg-convert/uploads/2024-05-26 18-03-39.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf60.16.100
+  Duration: 00:00:17.20, start: 0.000000, bitrate: 10365 kb/s
+  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 1920x1080 [SAR 1:1 DAR 16:9], 10196 kb/s, 30 fps, 30 tbr, 15360 tbn (default)
+      Metadata:
+        handler_name    : VideoHandler
+        vendor_id       : [0][0][0][0]
+  Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 159 kb/s (default)
+      Metadata:
+        handler_name    : SoundHandler
+        vendor_id       : [0][0][0][0]
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 (native) -> h264 (libx264))
+  Stream #0:1 -> #0:1 (aac (native) -> aac (native))
+Press [q] to stop, [?] for help
+[libx264 @ 0x7ff401f16400] using SAR=1/1
+[libx264 @ 0x7ff401f16400] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2
+[libx264 @ 0x7ff401f16400] profile High, level 4.0, 4:2:0, 8-bit
+[libx264 @ 0x7ff401f16400] 264 - core 164 r3204 373697b - H.264/MPEG-4 AVC codec - Copyleft 2003-2025 - http://www.videolan.org/x264.html - options: cabac=1 ref=2 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=6 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=6 lookahead_threads=1 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=1 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=30 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to '/usr/local/var/www/media-processr/ffmpeg-convert/uploads/converted_2024-05-26 18-03-39.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf61.7.100
+  Stream #0:0(und): Video: h264 (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 1920x1080 [SAR 1:1 DAR 16:9], q=2-31, 30 fps, 15360 tbn (default)
+      Metadata:
+        handler_name    : VideoHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.19.101 libx264
+      Side data:
+        cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+  Stream #0:1(und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 128 kb/s (default)
+      Metadata:
+        handler_name    : SoundHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.19.101 aac
+frame=    0 fps=0.0 q=0.0 size=       0KiB time=N/A bitrate=N/A speed=N/A    frame=   20 fps= 18 q=29.0 size=     256KiB time=00:00:00.60 bitrate=3495.9kbits/s speed=0.53x    frame=   49 fps= 29 q=29.0 size=     256KiB time=00:00:01.56 bitrate=1338.9kbits/s speed=0.914x    frame=   75 fps= 34 q=29.0 size=     256KiB time=00:00:02.43 bitrate= 862.0kbits/s speed=1.09x    frame=  102 fps= 36 q=29.0 size=     512KiB time=00:00:03.33 bitrate=1258.4kbits/s speed=1.18x    frame=  128 fps= 38 q=29.0 size=     512KiB time=00:00:04.20 bitrate= 998.7kbits/s speed=1.25x    frame=  152 fps= 39 q=29.0 size=     512KiB time=00:00:05.00 bitrate= 838.9kbits/s speed= 1.3x    frame=  176 fps= 40 q=29.0 size=     512KiB time=00:00:05.80 bitrate= 723.2kbits/s speed=1.33x    frame=  200 fps= 41 q=29.0 size=     768KiB time=00:00:06.60 bitrate= 953.3kbits/s speed=1.36x    frame=  223 fps= 42 q=29.0 size=     768KiB time=00:00:07.36 bitrate= 854.1kbits/s speed=1.38x    frame=  246 fps= 42 q=26.0 size=     768KiB time=00:00:08.13 bitrate= 773.6kbits/s speed=1.39x    frame=  269 fps= 42 q=29.0 size=    1024KiB time=00:00:08.90 bitrate= 942.6kbits/s speed= 1.4x    frame=  294 fps= 43 q=29.0 size=    1280KiB time=00:00:09.73 bitrate=1077.3kbits/s speed=1.41x    frame=  320 fps= 43 q=29.0 size=    1280KiB time=00:00:10.60 bitrate= 989.3kbits/s speed=1.42x    frame=  349 fps= 43 q=29.0 size=    1536KiB time=00:00:11.56 bitrate=1087.9kbits/s speed=1.42x    frame=  372 fps= 43 q=29.0 size=    1536KiB time=00:00:12.33 bitrate=1020.3kbits/s speed=1.43x    frame=  402 fps= 43 q=29.0 size=    1536KiB time=00:00:13.33 bitrate= 943.7kbits/s speed=1.44x    frame=  427 fps= 44 q=29.0 size=    1536KiB time=00:00:14.16 bitrate= 888.2kbits/s speed=1.45x    frame=  451 fps= 44 q=29.0 size=    1792KiB time=00:00:14.96 bitrate= 980.9kbits/s speed=1.46x    frame=  481 fps= 44 q=29.0 size=    1792KiB time=N/A bitrate=N/A speed=N/A    frame=  514 fps= 45 q=-1.0 size=    2048KiB time=N/A bitrate=N/A speed=N/A    [out#0/mp4 @ 0x7ff401f0e9c0] video:2042KiB audio:267KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.861682%
+frame=  516 fps= 46 q=-1.0 Lsize=    2328KiB time=00:00:17.13 bitrate=1113.2kbits/s speed=1.51x    
+[libx264 @ 0x7ff401f16400] frame I:3     Avg QP:16.86  size:227614
+[libx264 @ 0x7ff401f16400] frame P:130   Avg QP:19.14  size:  8401
+[libx264 @ 0x7ff401f16400] frame B:383   Avg QP:23.64  size:   822
+[libx264 @ 0x7ff401f16400] consecutive B-frames:  0.8%  0.4%  1.2% 97.7%
+[libx264 @ 0x7ff401f16400] mb I  I16..4: 24.5% 41.3% 34.3%
+[libx264 @ 0x7ff401f16400] mb P  I16..4:  0.1%  0.3%  0.2%  P16..4:  4.8%  2.0%  1.4%  0.0%  0.0%    skip:91.2%
+[libx264 @ 0x7ff401f16400] mb B  I16..4:  0.0%  0.0%  0.0%  B16..8:  1.5%  0.4%  0.0%  direct: 0.5%  skip:97.5%  L0:34.0% L1:38.1% BI:27.9%
+[libx264 @ 0x7ff401f16400] 8x8 transform intra:43.0% inter:45.1%
+[libx264 @ 0x7ff401f16400] coded y,uvDC,uvAC intra: 70.6% 70.8% 54.8% inter: 1.2% 0.9% 0.1%
+[libx264 @ 0x7ff401f16400] i16 v,h,dc,p: 13% 48%  9% 29%
+[libx264 @ 0x7ff401f16400] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 17% 28% 18%  4%  6%  5%  8%  6%  7%
+[libx264 @ 0x7ff401f16400] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 22% 26% 12%  5%  8%  6%  7%  6%  7%
+[libx264 @ 0x7ff401f16400] i8c dc,h,v,p: 47% 31% 14%  8%
+[libx264 @ 0x7ff401f16400] Weighted P-Frames: Y:0.0% UV:0.0%
+[libx264 @ 0x7ff401f16400] ref P L0: 62.8% 37.2%
+[libx264 @ 0x7ff401f16400] ref B L0: 76.7% 23.3%
+[libx264 @ 0x7ff401f16400] ref B L1: 96.7%  3.3%
+[libx264 @ 0x7ff401f16400] kb/s:968.32
+[aac @ 0x7ff402839e00] Qavg: 1837.145
+✅ Conversion complete
+➡️ View: http://192.168.0.53:8080/media-processr/ffmpeg-convert/uploads/converted_2024-05-26 18-03-39.mp4
+Extracting MP3…
+ffmpeg version 7.1.1-tessus  https://evermeet.cx/ffmpeg/  Copyright (c) 2000-2025 the FFmpeg developers
+  built with Apple clang version 16.0.0 (clang-1600.0.26.6)
+  configuration: --cc=/usr/bin/clang --prefix=/opt/ffmpeg --extra-version=tessus --enable-avisynth --enable-fontconfig --enable-gpl --enable-libaom --enable-libass --enable-libbluray --enable-libdav1d --enable-libfreetype --enable-libgsm --enable-libharfbuzz --enable-libmodplug --enable-libmp3lame --enable-libmysofa --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopenh264 --enable-libopenjpeg --enable-libopus --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvmaf --enable-libvo-amrwbenc --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxavs --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-libzvbi --enable-version3 --pkg-config-flags=--static --disable-ffplay
+  libavutil      59. 39.100 / 59. 39.100
+  libavcodec     61. 19.101 / 61. 19.101
+  libavformat    61.  7.100 / 61.  7.100
+  libavdevice    61.  3.100 / 61.  3.100
+  libavfilter    10.  4.100 / 10.  4.100
+  libswscale      8.  3.100 /  8.  3.100
+  libswresample   5.  3.100 /  5.  3.100
+  libpostproc    58.  3.100 / 58.  3.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '/usr/local/var/www/media-processr/ffmpeg-convert/uploads/2024-05-29-21-27-26.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf60.16.100
+  Duration: 00:00:07.87, start: 0.000000, bitrate: 10264 kb/s
+  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 1920x1080 [SAR 1:1 DAR 16:9], 10095 kb/s, 30 fps, 30 tbr, 15360 tbn (default)
+      Metadata:
+        handler_name    : VideoHandler
+        vendor_id       : [0][0][0][0]
+  Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 159 kb/s (default)
+      Metadata:
+        handler_name    : SoundHandler
+        vendor_id       : [0][0][0][0]
+Stream mapping:
+  Stream #0:1 -> #0:0 (aac (native) -> mp3 (libmp3lame))
+Press [q] to stop, [?] for help
+Output #0, mp3, to '/usr/local/var/www/media-processr/ffmpeg-convert/uploads/2024-05-29-21-27-26.mp3':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    TSSE            : Lavf61.7.100
+  Stream #0:0(und): Audio: mp3, 48000 Hz, stereo, fltp (default)
+      Metadata:
+        handler_name    : SoundHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.19.101 libmp3lame
+[out#0/mp3 @ 0x7faf657116c0] video:0KiB audio:119KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.277124%
+size=     120KiB time=00:00:07.80 bitrate= 125.7kbits/s speed=21.7x    
+========== Fri Jul  4 08:36:59 PDT 2025 ==========
+Starting conversion…
+Input:  /usr/local/var/www/media-processr/ffmpeg-convert/uploads/2024-05-29-21-27-26.mp4
+Output: /usr/local/var/www/media-processr/ffmpeg-convert/uploads/2024-05-29-21-27-26.mp3
+
+ffmpeg version 7.1.1-tessus  https://evermeet.cx/ffmpeg/  Copyright (c) 2000-2025 the FFmpeg developers
+  built with Apple clang version 16.0.0 (clang-1600.0.26.6)
+  configuration: --cc=/usr/bin/clang --prefix=/opt/ffmpeg --extra-version=tessus --enable-avisynth --enable-fontconfig --enable-gpl --enable-libaom --enable-libass --enable-libbluray --enable-libdav1d --enable-libfreetype --enable-libgsm --enable-libharfbuzz --enable-libmodplug --enable-libmp3lame --enable-libmysofa --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopenh264 --enable-libopenjpeg --enable-libopus --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvmaf --enable-libvo-amrwbenc --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxavs --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-libzvbi --enable-version3 --pkg-config-flags=--static --disable-ffplay
+  libavutil      59. 39.100 / 59. 39.100
+  libavcodec     61. 19.101 / 61. 19.101
+  libavformat    61.  7.100 / 61.  7.100
+  libavdevice    61.  3.100 / 61.  3.100
+  libavfilter    10.  4.100 / 10.  4.100
+  libswscale      8.  3.100 /  8.  3.100
+  libswresample   5.  3.100 /  5.  3.100
+  libpostproc    58.  3.100 / 58.  3.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '/usr/local/var/www/media-processr/ffmpeg-convert/uploads/2024-05-29-21-27-26.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf60.16.100
+  Duration: 00:00:07.87, start: 0.000000, bitrate: 10264 kb/s
+  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 1920x1080 [SAR 1:1 DAR 16:9], 10095 kb/s, 30 fps, 30 tbr, 15360 tbn (default)
+      Metadata:
+        handler_name    : VideoHandler
+        vendor_id       : [0][0][0][0]
+  Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 159 kb/s (default)
+      Metadata:
+        handler_name    : SoundHandler
+        vendor_id       : [0][0][0][0]
+Stream mapping:
+  Stream #0:1 -> #0:0 (aac (native) -> mp3 (libmp3lame))
+Press [q] to stop, [?] for help
+Output #0, mp3, to '/usr/local/var/www/media-processr/ffmpeg-convert/uploads/2024-05-29-21-27-26.mp3':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    TSSE            : Lavf61.7.100
+  Stream #0:0(und): Audio: mp3, 48000 Hz, stereo, fltp (default)
+      Metadata:
+        handler_name    : SoundHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.19.101 libmp3lame
+[out#0/mp3 @ 0x7f8c9cf04e40] video:0KiB audio:119KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.277124%
+size=     120KiB time=00:00:07.80 bitrate= 125.7kbits/s speed=  22x    
+✅ Conversion complete
+➡️ View: http://192.168.0.53:8080/media-processr/ffmpeg-convert/uploads/2024-05-29-21-27-26.mp3
