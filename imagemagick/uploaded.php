@@ -58,6 +58,15 @@ if (!file_exists($filepath)) {
         </button>
     </form>
 
+    <!-- ── New button: send user to text-input page ── -->
+    <form action="input.php" method="get" class="w3-center">
+        <input type="hidden" name="file" value="<?= htmlspecialchars($filename) ?>">
+        <button class="w3-button w3-purple w3-margin-top">
+            Add Text Overlay
+        </button>
+    </form>
+
+
     <div class="w3-center w3-margin-top">
         <a href="index.php" class="w3-button w3-grey">Upload Another</a>
     </div>

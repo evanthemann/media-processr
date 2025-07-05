@@ -22,7 +22,9 @@ text=$(echo "$text" | tr '[:lower:]' '[:upper:]')
 
 # Confirm success
 if [ -f "$output_file" ]; then
-    echo "Thumbnail generated successfully: $output_file"
+    echo "Thumbnail generated successfully: $output_file" >> "$log"
+    echo "➡️ View: overlay_$(basename "$in")" >> "$log"
+    rm "$in"
 else
-    echo "Error: Failed to generate thumbnail."
+    echo "Error: Failed to generate thumbnail." >> "$log"
 fi
