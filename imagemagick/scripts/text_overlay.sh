@@ -27,8 +27,8 @@ if [ -f "$output_file" ]; then
     # Derive relative web path
     base_url="http://192.168.0.53:8080/media-processr/imagemagick/uploads"
     filename=$(basename "$output_file")
-    echo "➡️ View: $base_url/$filename" >> "$log_file"
-    
+    echo "➡️ View: $base_url/$filename" >> "$log"
+
     # Optional: clean up input
     rm "$input_file"
 else

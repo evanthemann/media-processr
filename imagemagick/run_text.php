@@ -12,7 +12,7 @@ $scriptPath = "$dir/scripts/text_overlay.sh";
 $logFile    = "$dir/convert.log";
 
 $inputFile  = $uploadDir . $filename;
-$outputFile = $uploadDir . 'overlay_' . $filename;
+$outputFile = $uploadDir . 'overlay_' . pathinfo($filename, PATHINFO_FILENAME) . '.jpg';
 
 /* Build and launch */
 $cmd = "/bin/bash " . escapeshellarg($scriptPath) . ' '
