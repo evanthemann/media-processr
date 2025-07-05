@@ -41,7 +41,7 @@ if (!file_exists($filepath)) {
         </button>
     </form>
 
-    <!-- Extract audio (example) -->
+    <!-- Extract audio -->
     <form action="run.php" method="post" class="w3-center">
         <input type="hidden" name="filename" value="<?= htmlspecialchars($filename) ?>">
         <input type="hidden" name="preset"   value="mp3">
@@ -50,12 +50,20 @@ if (!file_exists($filepath)) {
         </button>
     </form>
 
-    <!-- Make GIF (example) -->
+    <!-- Make GIF -->
     <form action="run.php" method="post" class="w3-center">
         <input type="hidden" name="filename" value="<?= htmlspecialchars($filename) ?>">
         <input type="hidden" name="preset"   value="gif">
         <button class="w3-button w3-orange w3-margin-top" type="submit">
             Make GIF
+        </button>
+    </form>
+
+    <!-- Cellauto text slide -->
+    <form action="input.php" method="post" class="w3-center">
+        <input type="hidden" name="filename" value="<?= htmlspecialchars($filename) ?>">
+        <button class="w3-button w3-orange w3-margin-top" type="submit">
+            Cellauto text slide
         </button>
     </form>
 
