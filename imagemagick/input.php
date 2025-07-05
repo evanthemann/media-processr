@@ -1,9 +1,9 @@
 <?php
 /* Expect ?file=FILENAME in URL */
-if (!isset($_GET['file']) || $_GET['file'] === '') {
+if (!isset($_GET['filename']) || $_GET['filename'] === '') {
     die('No file specified.');
 }
-$filename = basename($_GET['file']);      // sanitise
+$filename = basename($_GET['filename']);      // sanitise
 ?>
 <!DOCTYPE html>
 <html>

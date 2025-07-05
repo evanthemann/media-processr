@@ -60,7 +60,7 @@ if (!file_exists($filepath)) {
 
     <!-- ── New button: send user to text-input page ── -->
     <form action="input.php" method="get" class="w3-center">
-        <input type="hidden" name="file" value="<?= htmlspecialchars($filename) ?>">
+        <input type="hidden" name="filename" value="<?= htmlspecialchars($filename) ?>">
         <button class="w3-button w3-purple w3-margin-top">
             YouTube thumbnail
         </button>
