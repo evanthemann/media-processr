@@ -1,9 +1,8 @@
 <?php
 /* Validate POST */
-if (!isset($_POST['filename'], $_POST['overlay'], $_POST['bg-color'])) {
+if (!isset($_POST['overlay'], $_POST['bg-color'])) {
     die('Missing params.');
 }
-$filename = basename($_POST['filename']);
 $text     = $_POST['overlay'];            // keep raw; shell-escaped later
 $bgcolor     = $_POST['bg-color'];            // keep raw; shell-escaped later
 
@@ -14,12 +13,10 @@ $uploadDir  = "$dir/uploads/";
 $scriptPath = "$dir/scripts/text_overlay.sh";
 $logFile    = "$dir/convert.log";
 
-$inputFile  = $uploadDir . $filename;
-$outputFile = $uploadDir . 'overlay_' . pathinfo($filename, PATHINFO_FILENAME) . '.mp4';
+$outputFile = $uploadDir . 'textslide.mp4';
 
 /* Build and launch */
 $cmd = "/bin/bash " . escapeshellarg($scriptPath) . ' '
-     . escapeshellarg($inputFile) . ' '
      . escapeshellarg($outputFile) . ' '
      . escapeshellarg($text) . ' '
      . escapeshellarg($bgcolor) . ' '
@@ -38,7 +35,7 @@ shell_exec($cmd);
 <body class="w3-container w3-light-grey">
 <div class="w3-card w3-white w3-padding w3-margin-top">
     <h3 class="w3-text-green">Overlay job started ✔︎</h3>
-    <p>Processing <strong><?= htmlspecialchars($filename) ?></strong></p>
+    <p>Processing </p>
     <form action="check.php" method="get">
         <button class="w3-button w3-blue">Check Progress</button>
     </form>

@@ -1,10 +1,10 @@
 #!/bin/bash
 
-input_file="$1"
-output_file="$2"
-text="$3"
-bgcolor="$4"
-log_file="$5"
+
+output_file="$1"
+text="$2"
+bgcolor="$3"
+log_file="$4"
 
 title_safe=$(echo "$text" | sed 's/[^a-zA-Z0-9\_\-]/_/g')
 

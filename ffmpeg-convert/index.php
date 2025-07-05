@@ -47,5 +47,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['media'])) {
         <input class="w3-input w3-border w3-margin-bottom" type="file" name="media" required>
         <button class="w3-button w3-green" type="submit">Upload</button>
     </form>
+
+
+    <!-- Cellauto text slide -->
+    <form action="input.php" method="post" class="w3-center">
+        <button class="w3-button w3-orange w3-margin-top" type="submit">
+            Cellauto text slide
+        </button>
+    </form>
+
 </body>
 </html>

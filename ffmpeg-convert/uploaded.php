@@ -59,14 +59,6 @@ if (!file_exists($filepath)) {
         </button>
     </form>
 
-    <!-- Cellauto text slide -->
-    <form action="input.php" method="post" class="w3-center">
-        <input type="hidden" name="filename" value="<?= htmlspecialchars($filename) ?>">
-        <button class="w3-button w3-orange w3-margin-top" type="submit">
-            Cellauto text slide
-        </button>
-    </form>
-
     <div class="w3-center w3-margin-top">
         <a href="index.php" class="w3-button w3-grey">Upload Another</a>
     </div>
