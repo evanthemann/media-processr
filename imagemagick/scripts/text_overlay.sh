@@ -23,8 +23,14 @@ text=$(echo "$text" | tr '[:lower:]' '[:upper:]')
 # Confirm success
 if [ -f "$output_file" ]; then
     echo "Thumbnail generated successfully: $output_file" >> "$log"
-    echo "➡️ View: overlay_$(basename "$in")" >> "$log"
-    rm "$in"
+
+    # Derive relative web path
+    base_url="http://192.168.0.53:8080/media-processr/imagemagick/uploads"
+    filename=$(basename "$output_file")
+    echo "➡️ View: $base_url/$filename" >> "$log_file"
+    
+    # Optional: clean up input
+    rm "$input_file"
 else
     echo "Error: Failed to generate thumbnail." >> "$log"
 fi
