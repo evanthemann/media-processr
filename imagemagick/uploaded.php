@@ -40,7 +40,7 @@ if (!file_exists($filepath)) {
         </button>
     </form>
 
-    <!-- Extract audio (example) -->
+    <!-- Black background 16x9 -->
     <form action="run.php" method="post" class="w3-center">
         <input type="hidden" name="filename" value="<?= htmlspecialchars($filename) ?>">
         <input type="hidden" name="preset"   value="blackbg">
@@ -62,7 +62,7 @@ if (!file_exists($filepath)) {
     <form action="input.php" method="get" class="w3-center">
         <input type="hidden" name="file" value="<?= htmlspecialchars($filename) ?>">
         <button class="w3-button w3-purple w3-margin-top">
-            Add Text Overlay
+            YouTube thumbnail
         </button>
     </form>
 

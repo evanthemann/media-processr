@@ -1,4 +1,4 @@
-# Ignore all files inside uploads, but keep the folder
-/uploads/*
-!/uploads/.gitignore
+# Ignore all files inside upload folders, but keep the folders
+/ffmpeg-convert/uploads/*
+/imagemagick/uploads/*
 
