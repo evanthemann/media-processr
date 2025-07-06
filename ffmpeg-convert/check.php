@@ -1,3 +1,16 @@
+<?php
+$logFile = __DIR__ . '/convert.log';           // <-- same file used in run.php & script
+$tail    = '';
+
+if (file_exists($logFile)) {
+    $tail = shell_exec("tail -n 10 " . escapeshellarg($logFile));
+    if ($tail === null || trim($tail) === '') {          // empty or unreadable
+        $tail = "(log file exists but is empty)";
+    }
+} else {
+    $tail = "(log file not found)";
+}
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,19 +27,6 @@
 
     <form><button class="w3-button w3-blue">Refresh</button></form>
     <a href="index.php" class="w3-button w3-grey w3-margin-top">Back to Upload</a>
-    <?php
-    $logFile = __DIR__ . '/convert.log';           // <-- same file used in run.php & script
-    $tail    = '';
-
-    if (file_exists($logFile)) {
-        $tail = shell_exec("tail -n 10 " . escapeshellarg($logFile));
-        if ($tail === null || trim($tail) === '') {          // empty or unreadable
-            $tail = "(log file exists but is empty)";
-        }
-    } else {
-        $tail = "(log file not found)";
-    }
-    ?>
 </div>
 </body>
 </html>
