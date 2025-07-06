@@ -12,7 +12,7 @@ $scriptPath = "$dir/scripts/text_overlay.sh";
 
 $logFile    = "$dir/convert.log";
 
-$outputFile = 'textslide.mp4';
+$outputFile = '$dir/uploads/cellauto.mp4';
 
 /* Build and launch */
 $cmd = "/bin/bash " . escapeshellarg($scriptPath) . ' '

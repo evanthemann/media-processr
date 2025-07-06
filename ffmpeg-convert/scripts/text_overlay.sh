@@ -10,7 +10,7 @@ pwd >> "$log_file"
 title_safe=$(echo "$text" | sed 's/[^a-zA-Z0-9\_\-]/_/g')
 
 # 1. Generate cellauto video
-/usr/local/bin/ffmpeg -f lavfi -i cellauto=s=1920x1080:rule=30 -t 10 -c:v libx264 cellauto.mp4 -y
+/usr/local/bin/ffmpeg -f lavfi -i cellauto=s=1920x1080:rule=30 -t 10 -c:v libx264 "$output_file" -y
 
 # 2. Generate red color video yellow/gold #F7DC6F pale green (good) #C9E4CA pale blue #C5E3F4 pale red (good) #FFC6C9
 # /usr/local/bin/ffmpeg -f lavfi -i color=c=$bgcolor:s=1920x1080 -t 10 -c:v libx264 color.mp4 -y
