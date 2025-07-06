@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 output_file="$1"
 text="$2"
 bgcolor="$3"

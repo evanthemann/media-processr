@@ -6,14 +6,13 @@ if (!isset($_POST['overlay'], $_POST['bg-color'])) {
 $text     = $_POST['overlay'];            // keep raw; shell-escaped later
 $bgcolor     = $_POST['bg-color'];            // keep raw; shell-escaped later
 
-
-
 $dir        = __DIR__;
-$uploadDir  = "$dir/uploads/";
+
 $scriptPath = "$dir/scripts/text_overlay.sh";
+
 $logFile    = "$dir/convert.log";
 
-$outputFile = $uploadDir . 'textslide.mp4';
+$outputFile = 'textslide.mp4';
 
 /* Build and launch */
 $cmd = "/bin/bash " . escapeshellarg($scriptPath) . ' '
@@ -36,6 +35,7 @@ shell_exec($cmd);
 <div class="w3-card w3-white w3-padding w3-margin-top">
     <h3 class="w3-text-green">Overlay job started ✔︎</h3>
     <p>Processing </p>
+    <?php echo $cmd ?>
     <form action="check.php" method="get">
         <button class="w3-button w3-blue">Check Progress</button>
     </form>
