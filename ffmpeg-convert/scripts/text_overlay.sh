@@ -1,16 +1,18 @@
 #!/bin/bash
 
-output_file="$1"
-text="$2"
-bgcolor="$3"
-log_file="$4"
+text="$1"
+bgcolor="$2"
+log_file="$3"
 
 pwd >> "$log_file"
 
 title_safe=$(echo "$text" | sed 's/[^a-zA-Z0-9\_\-]/_/g')
 
+workdir="/usr/local/var/www/media-processr/ffmpeg-convert/uploads"
+outfile="$workdir/cellauto.mp4"
+
 # 1. Generate cellauto video
-/usr/local/bin/ffmpeg -f lavfi -i cellauto=s=1920x1080:rule=30 -t 10 -c:v libx264 "$output_file" -y
+/usr/local/bin/ffmpeg -f lavfi -i cellauto=s=1920x1080:rule=30 -t 10 -c:v libx264 "$outfile" -y
 
 # 2. Generate red color video yellow/gold #F7DC6F pale green (good) #C9E4CA pale blue #C5E3F4 pale red (good) #FFC6C9
 # /usr/local/bin/ffmpeg -f lavfi -i color=c=$bgcolor:s=1920x1080 -t 10 -c:v libx264 color.mp4 -y
@@ -33,12 +35,12 @@ title_safe=$(echo "$text" | sed 's/[^a-zA-Z0-9\_\-]/_/g')
 # ffplay "${title_safe//[^a-zA-Z0-9\_\-]/_}.mp4"
 
 # Confirm success
-if [ -f "$output_file" ]; then
-    echo "Thumbnail generated successfully: $output_file" >> "$log_file"
+if [ -f "$outfile" ]; then
+    echo "Thumbnail generated successfully: $outfile" >> "$log_file"
 
     # Derive relative web path
     base_url="http://192.168.0.53:8080/media-processr/ffmpeg-convert/uploads"
-    filename=$(basename "$output_file")
+    filename=$(basename "$outfile")
     echo "➡️ View: $base_url/$filename" >> "$log_file"
     echo "➡️ View: ${title_safe//[^a-zA-Z0-9\_\-]/_}.mp4" >> "$log_file"
 

@@ -12,11 +12,8 @@ $scriptPath = "$dir/scripts/text_overlay.sh";
 
 $logFile    = "$dir/convert.log";
 
-$outputFile = '$dir/uploads/cellauto.mp4';
-
 /* Build and launch */
 $cmd = "/bin/bash " . escapeshellarg($scriptPath) . ' '
-     . escapeshellarg($outputFile) . ' '
      . escapeshellarg($text) . ' '
      . escapeshellarg($bgcolor) . ' '
      . escapeshellarg($logFile)
