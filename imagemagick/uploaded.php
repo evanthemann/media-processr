@@ -64,7 +64,7 @@ if (!file_exists($filepath)) {
         <input type="hidden" name="filename" value="<?= htmlspecialchars($filename) ?>">
         <input type="hidden" name="preset"   value="pdftojpg">
         <button class="w3-button w3-green w3-margin-top" type="submit">
-            Make GIF
+            PDF to JPG
         </button>
     </form>
 
