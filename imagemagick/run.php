@@ -31,6 +31,13 @@ switch ($preset) {
         $cmd = "/bin/bash $scriptPath '$inputFile' '$outputFile' '$logFile'";
         break;
 
+    case 'pdftojpg':
+        $outputFile = $uploadDir . pathinfo($filename, PATHINFO_FILENAME) . '.jpg';
+        $scriptPath = __DIR__ . '/scripts/pdftojpg.sh';
+        $cmd = "/bin/bash $scriptPath '$inputFile' '$outputFile' '$logFile'";
+        break;
+
+
     default:
         die('Unknown preset.');
 }

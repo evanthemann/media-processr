@@ -58,6 +58,16 @@ if (!file_exists($filepath)) {
         </button>
     </form>
 
+
+    <!-- pdf to jpg -->
+    <form action="run.php" method="post" class="w3-center">
+        <input type="hidden" name="filename" value="<?= htmlspecialchars($filename) ?>">
+        <input type="hidden" name="preset"   value="pdftojpg">
+        <button class="w3-button w3-green w3-margin-top" type="submit">
+            Make GIF
+        </button>
+    </form>
+
     <!-- ── New button: send user to text-input page ── -->
     <form action="input.php" method="get" class="w3-center">
         <input type="hidden" name="filename" value="<?= htmlspecialchars($filename) ?>">
